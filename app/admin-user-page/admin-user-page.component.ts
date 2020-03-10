@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../DTO/User';
 
 @Component({
   selector: 'app-admin-user-page',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminUserPageComponent implements OnInit {
 
+  selectedUser : User;
+  selectedUserID : number;
   constructor() { }
 
   ngOnInit() {
   }
 
+  setSelectedUser(event){
+    this.selectedUser = event;
+  }
+
+  setSelectedUserID(event){
+    this.selectedUserID = event;
+  }
 }

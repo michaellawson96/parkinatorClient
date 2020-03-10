@@ -1,7 +1,7 @@
 import { Component, OnInit, NgModule } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../authentication.service';
-import { User } from '../DTO/Users';
+import { User } from '../DTO/User';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Login } from '../DTO/Login';
 import { UserDataService } from '../user-data.service';

@@ -1,1 +1,9 @@
-<p>admin-user-page works!</p>
+<app-header></app-header>
+<div class="container">
+    <div class="row">
+      <app-user-list (selecteduser)="setSelecteduser($event)"
+        class='col-6'></app-user-list>
+      <app-user-details [user]="selecteduser"
+        class='col-6'></app-user-details>    
+    </div>
+</div>

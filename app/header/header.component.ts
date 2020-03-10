@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../DTO/Users';
+import { User } from '../DTO/User';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../authentication.service';
 import { Login } from '../DTO/Login';
-import { User } from '../DTO/Users';
+import { User } from '../DTO/User';
 import { Router } from '@angular/router';
 import { RecoveryDataService } from '../recovery-data.service';
 import { PasswordRecoveryDataService } from '../password-recovery-data.service';

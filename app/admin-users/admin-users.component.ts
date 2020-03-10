@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { UserDataService } from '../user-data.service';
-import { User } from '../DTO/Users';
+import { User } from '../DTO/User';
 
 @Component({
   selector: 'app-admin-users',
@@ -31,7 +31,7 @@ export class AdminUsersComponent implements OnInit {
     err=> {console.log("Error = ", err.message);
       this.errorMsg = err.message});
   }
-
+/*
   onSubmit( details : NgForm ) {
     if(this.notEditable) {
       this.notEditable = false;
@@ -67,6 +67,6 @@ export class AdminUsersComponent implements OnInit {
         }
       });
       this.cl.cars = this.newCars;
-  }
+  }*/
 
 }

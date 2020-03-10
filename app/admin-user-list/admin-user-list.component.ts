@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable, Output } from '@angular/core';
+import { User } from '../DTO/User';
+
+
+@Injectable({
+  providedIn: 'root'
+})
 
 @Component({
   selector: 'app-admin-user-list',
@@ -7,9 +13,42 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminUserListComponent implements OnInit {
 
-  constructor() { }
+  @Output() selecteduser = new EventEmitter<user>();
+  selecteduserID : number;
+  user: User;
+  users: User[] = [];
+  errorMsg :String = null;
+  user_id : number;
+
+  constructor(private cdService :UseruserDataService) { }
+
 
   ngOnInit() {
+    this.user = <User>JSON.parse(sessionStorage.getItem('userDetail'));
+    this.cdService.getUserusers(this.user.user_id).subscribe( data => {
+      
+      console.log(data.toString());
+      this.users = data;
+
+      this.users.forEach(element => {
+      console.log(element);
+      });
+      this.errorMsg = null;
+    },
+    err=> {console.log("Error = ", err.message);
+      this.errorMsg = err.message});
+  }
+
+  userSelected(i : number){
+    console.log("user ID = " + i);
+    this.selecteduser.emit(this.users.find(user => user.user_id === i));    
+    this.selecteduserID = i;
+  }
+
+  trackByFn(index, item) {
+
+    return ; // or item.id
+
   }
 
 }

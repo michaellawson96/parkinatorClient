@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter, Injectable } from '@angular/core';
-import { User } from '../DTO/Users';
+import { User } from '../DTO/User';
 import { Car } from '../DTO/Car';
 import { CarDetailsComponent } from '../car-details/car-details.component';
 import { UserCarDataService } from '../userCar-data.service';
@@ -8,9 +8,9 @@ import { UserCarDataService } from '../userCar-data.service';
   providedIn: 'root'
 })
 @Component({
-  selector: 'app-car',
-  templateUrl: './car.component.html',
-  styleUrls: ['./car.component.css']
+  selector: 'app-car-list',
+  templateUrl: './car-list.component.html',
+  styleUrls: ['./car-list.component.css']
 })
 export class CarComponent implements OnInit {
 

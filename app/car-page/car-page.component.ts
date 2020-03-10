@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Car } from '../DTO/Car';
 
 @Component({
-  selector: 'app-car-page',
+  selector: 'app-car-list-page',
   templateUrl: './car-page.component.html',
   styleUrls: ['./car-page.component.css']
 })

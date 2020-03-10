@@ -2,11 +2,11 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Car } from '../DTO/Car';
 import { NgForm } from '@angular/forms';
 import { CarDataService } from '../car-data.service';
-import { User } from '../DTO/Users';
+import { User } from '../DTO/User';
 import { CarComponent } from '../car-list/car-list.component';
 
 @Component({
-  selector: 'app-car-details',
+  selector: 'app-car-list-details',
   templateUrl: './car-details.component.html',
   styleUrls: ['./car-details.component.css']
 })
