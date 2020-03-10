@@ -3,7 +3,7 @@ import { Car } from '../DTO/Car';
 import { NgForm } from '@angular/forms';
 import { CarDataService } from '../car-data.service';
 import { User } from '../DTO/User';
-import { CarComponent } from '../car-list/car-list.component';
+import { CarListComponent } from '../car-list/car-list.component';
 
 @Component({
   selector: 'app-car-list-details',
@@ -18,7 +18,7 @@ export class CarDetailsComponent implements OnInit {
   user : User = <User>JSON.parse(sessionStorage.getItem('userDetail')); 
   newCars : Car[] = [];
 
-  constructor(private cdService : CarDataService, private cl : CarComponent) { }
+  constructor(private cdService : CarDataService, private cl : CarListComponent) { }
 
   ngOnInit() {
     this.car = new Car (0,"","","","",0);

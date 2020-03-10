@@ -12,7 +12,7 @@ import { UserCarDataService } from '../userCar-data.service';
   templateUrl: './car-list.component.html',
   styleUrls: ['./car-list.component.css']
 })
-export class CarComponent implements OnInit {
+export class CarListComponent implements OnInit {
 
   @Output() selectedCar = new EventEmitter<Car>();
   selectedCarID : number;

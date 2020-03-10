@@ -1,5 +1,6 @@
-import { Component, OnInit, Injectable, Output } from '@angular/core';
+import { Component, OnInit, Injectable, Output, EventEmitter } from '@angular/core';
 import { User } from '../DTO/User';
+import { UserDataService } from '../user-data.service';
 
 
 @Injectable({
@@ -13,19 +14,19 @@ import { User } from '../DTO/User';
 })
 export class AdminUserListComponent implements OnInit {
 
-  @Output() selecteduser = new EventEmitter<user>();
+  @Output() selecteduser = new EventEmitter<User>();
   selecteduserID : number;
   user: User;
   users: User[] = [];
   errorMsg :String = null;
   user_id : number;
 
-  constructor(private cdService :UseruserDataService) { }
+  constructor(private udService :UserDataService) { }
 
 
   ngOnInit() {
     this.user = <User>JSON.parse(sessionStorage.getItem('userDetail'));
-    this.cdService.getUserusers(this.user.user_id).subscribe( data => {
+    this.udService.readUser().subscribe( data => {
       
       console.log(data.toString());
       this.users = data;

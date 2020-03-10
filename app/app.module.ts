@@ -16,7 +16,7 @@ import { HeaderComponent } from './header/header.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RecoveryComponent } from './recovery/recovery.component';
 import {ConfirmEqualValidatorDirective} from '../shared/confirm-validator.directive';
-import { CarComponent } from './car-list/car-list.component';
+import { CarListComponent } from './car-list/car-list.component';
 import { CarDetailsComponent } from './car-details/car-details.component';
 import { CarPageComponent } from './car-page/car-page.component';
 import { NewCarComponent } from './new-car/new-car.component';
@@ -35,7 +35,7 @@ import { AdminUserDetailsComponent } from './admin-user-details/admin-user-detai
     ProfileComponent,
     RecoveryComponent,
     ConfirmEqualValidatorDirective,
-    CarComponent,
+    CarListComponent,
     CarDetailsComponent,
     CarPageComponent,
     NewCarComponent,
@@ -83,8 +83,8 @@ import { AdminUserDetailsComponent } from './admin-user-details/admin-user-detai
         canActivate: [AuthenticationGuard]
       }    ,
       {
-        path: 'admin-users',
-        component: AdminUsersComponent,
+        path: 'admin-user-page',
+        component: AdminUserPageComponent,
         canActivate: [AuthenticationGuard]
       }    
     ]),
