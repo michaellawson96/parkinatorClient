@@ -24,6 +24,7 @@ import { AdminUsersComponent } from './admin-users/admin-users.component';
 import { AdminUserPageComponent } from './admin-user-page/admin-user-page.component';
 import { AdminUserListComponent } from './admin-user-list/admin-user-list.component';
 import { AdminUserDetailsComponent } from './admin-user-details/admin-user-details.component';
+import { LotComponent } from './lot/lot.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +44,7 @@ import { AdminUserDetailsComponent } from './admin-user-details/admin-user-detai
     AdminUserPageComponent,
     AdminUserListComponent,
     AdminUserDetailsComponent,
+    LotComponent,
   ],
   imports: [
     BrowserModule,
@@ -86,7 +88,12 @@ import { AdminUserDetailsComponent } from './admin-user-details/admin-user-detai
         path: 'admin-user-page',
         component: AdminUserPageComponent,
         canActivate: [AuthenticationGuard]
-      }    
+      }    ,
+      {
+        path: 'lots',
+        component: LotComponent,
+        canActivate: [AuthenticationGuard]
+      }
     ]),
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
