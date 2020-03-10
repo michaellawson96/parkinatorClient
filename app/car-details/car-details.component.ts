@@ -23,7 +23,7 @@ export class CarDetailsComponent implements OnInit {
   ngOnInit() {
     this.car = new Car (0,"","","","",0);
   }
-
+//
   onSubmit( details : NgForm ) {
     if(this.notEditable) {
       this.notEditable = false;
