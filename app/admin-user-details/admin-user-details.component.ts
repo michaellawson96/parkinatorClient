@@ -14,7 +14,7 @@ export class AdminUserDetailsComponent implements OnInit {
   ngOnInit() {
   }
 
-  /*@Input() user:User;
+  @Input() user:User;
   notEditable : boolean = true;
   buttonText : string = "Edit";
   newUsers : User[] = [];
@@ -50,7 +50,7 @@ export class AdminUserDetailsComponent implements OnInit {
   onSubmit2( details : NgForm ) {
     event.defaultPrevented;
     //this signifies in the json string that the put should be used to delete the user
-      this.udService.removeUser(this.user);
+      this.udService.deleteUser(this.user.user_id);
       //just for safety, the value is removed from the user
       this.aulComp.users.forEach(element => {
         if(element.user_id!=this.user.user_id){
@@ -58,6 +58,6 @@ export class AdminUserDetailsComponent implements OnInit {
         }
       });
       this.aulComp.users = this.newUsers;
-  }*/
+  }
 
 }
